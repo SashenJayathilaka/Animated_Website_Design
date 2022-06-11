@@ -1,99 +1,149 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
 }
-.container{
+
+.hero{
 	width: 100%;
 	height: 100vh;
-	font-family: sans-serif;
-	background-image: url(images/banner4.jpg);
-	background-size: cover;
+	background-image: url(images/background.png);
 	background-position: center;
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 }
-h1{
-	color: #333;
-	text-align: center;
-	margin: 100px auto 50px;
-	font-family: sans-serif;
+
+.logo
+{
+	width: 100px;
+	cursor: pointer;
 }
-.row{
+
+.navbar
+{
 	width: 85%;
+	height: 15%;
 	margin: auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-.col{
-	flex-basis: 30%;
-	overflow: hidden;
-}
-.card{
-	width: 350px;
-	height: 350px;
-	margin: auto;
-	perspective: 100px;
+
+button{
+	color:#fbfcfd ;
+	padding: 10px 25px;
+	background: transparent;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	outline: none;
 	cursor: pointer;
 }
-.inner-box{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	border-radius: 10px;
-	transition: transform 1s;
-	transform-style: preserve-3d;
-}
-.card-front, .card-back{
+
+.content{
+	color:#fbfcfd ;
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	border-radius: 10px;
+	top: 50%;
+	left: 8%;
+	transform: translateY(-50%);
+	z-index: 2;
 }
-.card-front{
-	background-position: center;
-	background-size: cover;
-}
-.front-1{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(images/banner1.jpg);
-}
-.front-2{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(images/banner.jpg);
-}
-.front-3{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(images/banner2.jpg);
+h1{
+	font-size: 80px;
+	margin: 10px 0 30px;
+	line-height: 80px;
 }
 
-span{
-	display: inline-block;
-	width: 100px;
-	padding: 14px 0;
-	margin-top: 160px;
-	border-radius: 4px;
-	background: #fff;
-	color: #333;
-	transition: transform 1s;
+.side-bar{
+	width: 50px;
+	height: 100vh;
+	background: linear-gradient(#00545d , #000729);
+	position: absolute;
+	right: 0;
+	top: 0;
 }
-.card-back{
-	background: #1c1f54;
-	transform: rotateX(180deg);
+
+.menu{
+	display: block;
+	width: 25px;
+	margin: 40px auto 0;
+	cursor: pointer;
 }
-.card:hover .inner-box{
-	transform: rotateX(-180deg);
+
+.social-links img, .useful-links img{
+	width: 25px;
+	margin: 5px auto;
+	cursor: pointer;
 }
-.card:hover span{
-	transform: translateY(140px);
+
+.social-links{
+	width: 50px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
-p{
-	display: inline-block;
-	color: #fff;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #fff;
-	margin-top: 140px;
+
+.useful-links{
+	width: 50px;
+	text-align: center;
+	position: absolute;
+	bottom: 30px;	
 }
-.social-media img{
-	width: 30px;
-	margin: 10px 5px;
+.bubbles img{
+	width: 50px;
+	animation: bubble 7s linear infinite ;
+}
+
+.bubbles{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	bottom: -70px;
+}
+
+@keyframes bubble{
+	0%{
+		transform: translateY(0);
+		opacity: 0;
+	}
+	50%{
+		
+		opacity: 1;
+	}
+	70%{
+		
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(-80vh);
+		opacity: 0;
+	}
+}
+
+.bubbles img:nth-child(1){
+	animation-delay: 2s;
+	width: 25px;
+}
+.bubbles img:nth-child(2){
+	animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+	animation-delay: 3s;
+	width: 25px;
+}
+.bubbles img:nth-child(4){
+	animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+	animation-delay: 3s;
+}
+.bubbles img:nth-child(6){
+	animation-delay: 6s;
+	width: 25px;
+}
+.bubbles img:nth-child(7){
+	width: 35px;
+	animation-delay: 7s;
 }
